@@ -1,0 +1,53 @@
+
+%selector{
+    color: rgb(253, 89, 116); 
+    font-size: 20px;
+}
+
+$bg-color: rgb(252, 224, 202); 
+$borda: 2px solid rgb(253, 89, 116);
+$sombra: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+
+.menu{
+    width: 100%; /* Faz a tabela ocupar 100% da largura disponível */
+    text-align: center; /* Centraliza o texto dentro das células da tabela */
+    padding: 10px; /* Adiciona um espaçamento interno do tamanho desejado no topo e na base da tabela em relação a escrita*/
+    position: sticky; /* Torna a tabela "grudada" (sticky) ao rolar a página */
+    top: 0; /* Define que a tabela ficará fixa no topo da página quando rolada */
+    background-color: $bg-color; 
+}
+
+a{
+    @extend %selector;
+    text-decoration: none;
+
+    &:hover{
+        color: violet;
+        border-bottom: 2px solid violet; /* Adiciona uma borda inferior no tamanho e cor desejado */
+    }
+}
+
+@mixin bordas-sombras($borda, $sombra){
+    border: $borda;
+    box-shadow: $sombra;
+}
+
+.btn{
+    @extend %selector;
+    @include bordas-sombras($borda, $sombra);
+    padding: 20px;
+    background-color: $bg-color;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgb(245, 191, 245);
+        transition: 3s;   
+    }
+
+
+}
+
+
+
