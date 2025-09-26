@@ -1,0 +1,64 @@
+$color: rgb(253, 89, 116); 
+$bg-color: rgb(252, 224, 202);
+$background: rgb(255, 255, 255);
+
+$raio: 10px;
+$sombra: 0px 4px 8px rgba(0, 0, 0, 0.5);
+$cor: rgb(253, 89, 116);
+
+h2{
+    %titulo-card{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}}
+
+
+%texto-card{
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+%espacamento{
+margin: 40px 30px auto;
+padding: 20px auto;
+width: 500px;
+height: 150px;
+text-align: center;
+border-top: $cor 5px solid;
+}
+
+@mixin card-estilizado($raio, $sombra, $cor){
+    border-radius: $raio;
+    box-shadow: $sombra;
+    background-color: $cor;
+}
+
+h1{
+    color: $color;
+    text-align: center;
+}
+
+.dev-web{
+    @extend %espacamento;
+    @extend %titulo-card;
+    @extend %texto-card;
+    @include card-estilizado($raio, $sombra, $background);
+}   
+
+.dsgn-grafico{
+    @extend %espacamento;
+    @include card-estilizado($raio, $sombra, $background);
+}  
+
+.mkt-digital{
+    @extend %espacamento;
+    @include card-estilizado($raio, $sombra, $background);
+}  
+
+.cards{
+    @extend %titulo-card;
+    @extend %texto-card;
+    display: flex;
+}

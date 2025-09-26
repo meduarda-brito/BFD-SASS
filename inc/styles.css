@@ -1,0 +1,48 @@
+h2 .cards, h2 .dev-web {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cards, .dev-web {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.mkt-digital, .dsgn-grafico, .dev-web {
+  margin: 40px 30px auto;
+  padding: 20px auto;
+  width: 500px;
+  height: 150px;
+  text-align: center;
+  border-top: rgb(253, 89, 116) 5px solid;
+}
+
+h1 {
+  color: rgb(253, 89, 116);
+  text-align: center;
+}
+
+.dev-web {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
+}
+
+.dsgn-grafico {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
+}
+
+.mkt-digital {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255);
+}
+
+.cards {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles.css.map */
